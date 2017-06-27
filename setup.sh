@@ -88,11 +88,11 @@ pip3 install -r pips
 
 
 # Setup dotfiles
-echo '  » Cloning vundle'
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# echo '  » Cloning vundle'
+# git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-echo '  » Creating: ~/programming'
-mkdir ~/programming
+# echo '  » Creating: ~/programming'
+# mkdir ~/programming
 
 echo '  » Cloning dotfiles repo'
 git clone ~/programming/https://github.com/fairclothjm/dotfiles.git
@@ -122,13 +122,13 @@ sudo scutil --set LocalHostName $computer_name
 sys_config_path='/Library/Preferences/SystemConfiguration/com.apple.smb.server' 
 sudo defaults write ${sys_config_path} NetBIOSName -string $computer_name
 
-echo '  » Wiping all default apps from dock '
-defaults write com.apple.dock persistent-apps -array
+# echo '  » Wiping all default apps from dock '
+# defaults write com.apple.dock persistent-apps -array
 
-echo '  » Auto-hide dock and remove delay '
-defaults write com.apple.dock autohide -bool false
-defaults write com.apple.dock autohide-delay -float 0
-defaults write com.apple.dock autohide-time-modifier -float 0
+# echo '  » Auto-hide dock and remove delay '
+# defaults write com.apple.dock autohide -bool false
+# defaults write com.apple.dock autohide-delay -float 0
+# defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Disable the warning before emptying the Trash
 echo '  » Disable warning before emptying the trash '
@@ -138,18 +138,18 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 echo '  » Show the ~/Library folder '
 chflags nohidden ~/Library
 
-# Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
-echo '  » Add the keyboard shortcut ⌘ + Enter to send an email '
-defaults write com.apple.mail NSUserKeyEquivalents \ 
--dict-add "Send" -string "@\\U21a9"
+# # Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
+# echo '  » Add the keyboard shortcut ⌘ + Enter to send an email '
+# defaults write com.apple.mail NSUserKeyEquivalents \ 
+# -dict-add "Send" -string "@\\U21a9"
 
-# Disable prompt when quitting iterm2
-echo '  » Disable prompt when quitting iterm2 '
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+# # Disable prompt when quitting iterm2
+# echo '  » Disable prompt when quitting iterm2 '
+# defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 # Don’t automatically rearrange Spaces based on most recent use
-echo '  » Stop automatically rearranging spaces based on time '
-defaults write com.apple.dock mru-spaces -bool false
+# echo '  » Stop automatically rearranging spaces based on time '
+# defaults write com.apple.dock mru-spaces -bool false
 
 # expand save prompt
 echo '  » Expand save prompt '
@@ -158,34 +158,34 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
 # quit printer app when there are no pending jobs
-echo '  » Quit printer app when there are no pending jobs '
-defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+# echo '  » Quit printer app when there are no pending jobs '
+# defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 # check for updates daily
 echo '  » Check for Apple updates daily '
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # disable smart quotes, auto-correct spelling, and smart dashes
-echo '  » Disable smart quotes, auto-correct spelling, and smart dashes '
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+# echo '  » Disable smart quotes, auto-correct spelling, and smart dashes '
+# defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+# defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+# defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # prevent Photos from opening when inserting external media
-echo '  » Prevent photos from opening when instering drives '
-defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+# echo '  » Prevent photos from opening when instering drives '
+# defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 # Disable attachment previews in Mail.app
-echo '  » Disable attachment previews in Mail.app'
-defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
+# echo '  » Disable attachment previews in Mail.app'
+# defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
 
 # increase Bluetooth sound quality
 echo '  » Increase bluetooth sound quality '
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # disable press-and-hold for special keys
-echo '  » Disable special key press-and-hold '
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# echo '  » Disable special key press-and-hold '
+# defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # increase key repeat rate
 echo '  » Increase key repeat rate '
@@ -203,20 +203,20 @@ ss_path=${HOME}'/Documents/screenshots'
 defaults write com.apple.screencapture location -string "${ss_path}"
 
 # enable hidpi mode
-echo '  » Enable hidpi '
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+# echo '  » Enable hidpi '
+# sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
-# enable font rendering on non-apple displays
-echo '  » Enable font rendering on non-apple displays '
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
+# # enable font rendering on non-apple displays
+# echo '  » Enable font rendering on non-apple displays '
+# defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # show full path in finder
 echo '  » Show full path in finder '
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # disable warning when changing file extension
-echo '  » Disable warning when changing file extension '
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+# echo '  » Disable warning when changing file extension '
+# defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # disable .DS_Store on network drives
 echo '  » Prevent creation of .DS_Store on network drives '
@@ -229,8 +229,8 @@ echo '  » Enable snap to grid '
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 # set column view as default
-echo '  » Set column view as default in finder '
-defaults write com.apple.finder FXPreferredViewStyle Clmv
+# echo '  » Set column view as default in finder '
+# defaults write com.apple.finder FXPreferredViewStyle Clmv
 
 # set dock icons to 48px
 echo '  » Set dock icons to 48px '
@@ -241,15 +241,15 @@ echo '  » Reformat copying email addresses in mail.app '
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 #disable gatekeeper
-echo '  » Disable gatekeeper '
-sudo spctl --master-disable
+# echo '  » Disable gatekeeper '
+# sudo spctl --master-disable
 
 # change crash reporter to notification
 echo '  » Change crash reporter to notification '
 defaults write com.apple.CrashReporter UseUNC 1
 
 # create global .gitignore
-echo '  » Create global .gitignore '
+# echo '  » Create global .gitignore '
 # curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/gitignore.txt > ~/.gitignore
 
 # set git user info and credentials
@@ -257,4 +257,4 @@ echo '  » Set git user info and credentials '
 git config --global user.name $user_name
 git config --global user.email $user_email
 git config --global credential.helper osxkeychain
-git config --global core.editor 'vim -n -w'
+# git config --global core.editor 'vim -n -w'
