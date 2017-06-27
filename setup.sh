@@ -95,7 +95,7 @@ pip3 install -r pips
 # mkdir ~/programming
 
 echo '  » Cloning dotfiles repo'
-git clone ~/programming/https://github.com/fairclothjm/dotfiles.git
+git clone ~/programming/https://github.com/GWarrior5595/macdotfiles.git
 
 
 # Symlink dotfiles
