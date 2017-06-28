@@ -158,8 +158,8 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
 # quit printer app when there are no pending jobs
-# echo '  » Quit printer app when there are no pending jobs '
-# defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+echo '  » Quit printer app when there are no pending jobs '
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 # check for updates daily
 echo '  » Check for Apple updates daily '
@@ -172,8 +172,8 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # prevent Photos from opening when inserting external media
-# echo '  » Prevent photos from opening when instering drives '
-# defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+echo '  » Prevent photos from opening when instering drives '
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 # Disable attachment previews in Mail.app
 # echo '  » Disable attachment previews in Mail.app'
